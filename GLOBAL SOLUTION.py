@@ -1,5 +1,3 @@
-import datetime
-import math
 
 # 1. Base de Dados de Exemplo (Simulando leituras diárias: Data, Temp °C, Umidade %, Chuva mm)
 dados_climaticos = [
