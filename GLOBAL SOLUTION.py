@@ -1,18 +1,73 @@
 import datetime
-import math
 
-# 1. Base de Dados de Exemplo (Simulando leituras diárias: Data, Temp °C, Umidade %, Chuva mm)
-dados_climaticos = [
-    {"data": "2026-05-25", "temp": 22.5, "umidade": 65, "chuva": 0.0},
-    {"data": "2026-05-26", "temp": 24.0, "umidade": 60, "chuva": 0.0},
-    {"data": "2026-05-27", "temp": 26.8, "umidade": 55, "chuva": 2.5},
-    {"data": "2026-05-28", "temp": 29.5, "umidade": 48, "chuva": 0.0},
-    {"data": "2026-05-29", "temp": 31.0, "umidade": 40, "chuva": 0.0},
-    {"data": "2026-05-30", "temp": 33.5, "umidade": 35, "chuva": 0.0},
-    {"data": "2026-05-31", "temp": 35.0, "umidade": 30, "chuva": 0.0},
-    {"data": "2026-06-01", "temp": 28.0, "umidade": 85,
-        "chuva": 45.0},  # Queda abrupta e muita chuva
-]
+# Lista global que armazenará os dados inseridos pelo usuário
+dados_climaticos = []
+
+
+def coletar_dados_input():
+    """Interface de terminal para o usuário digitar os dados diários."""
+    print("=" * 55)
+    print("    SISTEMA INTERATIVO DE COLETA DE DADOS CLIMÁTICOS    ")
+    print("Este Programa serve para coletar os dados climaticos e gerar uma reportagem de riscos de acordo com os dias anteriores.")
+    print("=" * 55)
+    print("Digite os dados dia após dia. Quando quiser parar de inserir as caracteristicas do dia ou encerrar, digite 'sair'.\n")
+
+    contador = 1
+    while True:
+        print(f"--- Dados do Dia #{contador} ---")
+
+        # Entrada da Data
+        data_input = input(
+            "Data (AAAA-MM-DD) [Deixe em branco para usar a data de hoje]: "
+        ).strip()
+        if data_input.lower() == "sair":
+            break
+        if not data_input:
+            data_input = str(datetime.date.today())
+
+        # Entrada da Temperatura
+        try:
+            temp_raw = input("Temperatura Média (°C): ").strip()
+            if temp_raw.lower() == "sair":
+                break
+            temp = float(temp_raw)
+
+            # Entrada da Umidade
+            umi_raw = input("Umidade Relativa do Ar (%): ").strip()
+            if umi_raw.lower() == "sair":
+                break
+            umidade = float(umi_raw)
+            if not (0 <= umidade <= 100):
+                print(
+                    "❌ Erro: A umidade deve ser entre 0% e 100%. Reinicie este dia."
+                )
+                continue
+
+            # Entrada da Chuva
+            chuva_raw = input("Volume de Chuva (mm): ").strip()
+            if chuva_raw.lower() == "sair":
+                break
+            chuva = float(chuva_raw)
+            if chuva < 0:
+                print(
+                    "❌ Erro: O volume de chuva não pode ser negativo. Reinicie este dia."
+                )
+                continue
+
+        except ValueError:
+            print(
+                "❌ Erro: Por favor, insira valores numéricos válidos para temperatura, umidade e chuva.\n"
+            )
+            continue
+
+        # Salvando os dados validados no nosso "banco de dados" temporário
+        dados_climaticos.append(
+            {"data": data_input, "temp": temp, "umidade": umidade, "chuva": chuva}
+        )
+        print("✅ Dados do dia registrados com sucesso!\n")
+        contador += 1
+
+    print("\nColeta finalizada. Gerando relatórios...\n")
 
 
 def analisar_historico(dados):
@@ -24,7 +79,6 @@ def analisar_historico(dados):
     soma_temp = sum(d["temp"] for d in dados)
     soma_umi = sum(d["umidade"] for d in dados)
     total_chuva = sum(d["chuva"] for d in dados)
-
     temps = [d["temp"] for d in dados]
 
     return {
@@ -37,36 +91,37 @@ def analisar_historico(dados):
 
 
 def prever_proximo_dia(dados):
-    """Gera uma previsão simples baseada na tendência dos últimos 3 dias."""
-    if len(dados) < 3:
-        return "Dados insuficientes para prever estatisticamente."
+    """Gera uma previsão simples baseada na tendência dos últimos dias."""
+    if len(dados) < 2:
+        return "Dados insuficientes (mínimo de 2 dias) para projetar uma tendência."
 
-    # Pegamos os 3 últimos dias para ver a tendência
-    ultimos_dias = dados[-3:]
+    # Se tiver 3 ou mais dias, usa os 3 últimos. Se tiver 2, usa os 2.
+    ultimos_dias = dados[-3:] if len(dados) >= 3 else dados
 
-    # Tendência de Temperatura (Diferença média dia a dia)
-    diff_temp_1 = ultimos_dias[1]["temp"] - ultimos_dias[0]["temp"]
-    diff_temp_2 = ultimos_dias[2]["temp"] - ultimos_dias[1]["temp"]
-    tendencia_temp = (diff_temp_1 + diff_temp_2) / 2
+    # Calcula as diferenças de temperatura e umidade entre os dias passados
+    diffs_temp = []
+    diffs_umi = []
+    for i in range(1, len(ultimos_dias)):
+        diffs_temp.append(ultimos_dias[i]["temp"] - ultimos_dias[i - 1]["temp"])
+        diffs_umi.append(
+            ultimos_dias[i]["umidade"] - ultimos_dias[i - 1]["umidade"]
+        )
 
-    # Tendência de Umidade
-    diff_umi_1 = ultimos_dias[1]["umidade"] - ultimos_dias[0]["umidade"]
-    diff_umi_2 = ultimos_dias[2]["umidade"] - ultimos_dias[1]["umidade"]
-    tendencia_umi = (diff_umi_1 + diff_umi_2) / 2
+    # Tendência média
+    tendencia_temp = sum(diffs_temp) / len(diffs_temp)
+    tendencia_umi = sum(diffs_umi) / len(diffs_umi)
 
-    # Projeção para o dia seguinte
-    temp_prevista = ultimos_dias[2]["temp"] + tendencia_temp
-    umi_prevista = max(
-        0, min(100, ultimos_dias[2]["umidade"] + tendencia_umi)
-    )  # Mantém entre 0 e 100%
+    # Projeção baseada no último dia real inserido
+    temp_prevista = ultimos_dias[-1]["temp"] + tendencia_temp
+    umi_prevista = max(0, min(100, ultimos_dias[-1]["umidade"] + tendencia_umi))
 
-    # Lógica simples de probabilidade de chuva
+    # Lógica de probabilidade de chuva baseada na variação da umidade e temp
     if umi_prevista > 75 and tendencia_temp < 0:
-        chuva_prevista = "Alta probabilidade de chuva"
+        chuva_prevista = "Alta probabilidade de chuva / Tempestade"
     elif umi_prevista > 60:
-        chuva_prevista = "Possibilidade de chuva isolada"
+        chuva_prevista = "Possibilidade de chuvas isoladas"
     else:
-        chuva_prevista = "Tempo seco / Sem chuva"
+        chuva_prevista = "Tempo limpo / Sem previsão de chuva"
 
     return {
         "temp": round(temp_prevista, 1),
@@ -76,84 +131,85 @@ def prever_proximo_dia(dados):
 
 
 def detectar_riscos(dados):
-    """Varre os dados e as tendências para alertar sobre anomalias perigosas."""
+    """Varre o histórico para alertar sobre anomalias críticas ou mudanças bruscas."""
     alertas = []
     if not dados:
         return alertas
 
-    ultimo_registro = dados[-1]
+    # Analisa o último dia digitado
+    ultimo = dados[-1]
 
-    # 1. Risco de Ondas de Calor (Ex: Temperatura > 34°C)
-    if ultimo_registro["temp"] >= 35.0:
+    if ultimo["temp"] >= 35.0:
         alertas.append(
-            f"⚠️ ALERTA DE ONDA DE CALOR: Temperatura extrema registrada ({ultimo_registro['temp']}°C)."
+            f"⚠️ ONDA DE CALOR: Temperatura crítica detectada em {ultimo['data']} ({ultimo['temp']}°C)."
         )
 
-    # 2. Risco de Baixa Umidade (Prejudicial à saúde)
-    if ultimo_registro["umidade"] <= 30:
+    if ultimo["umidade"] <= 30:
         alertas.append(
-            f"⚠️ ALERTA DE BAIXA UMIDADE: Ar muito seco ({ultimo_registro['umidade']}%). Hidrate-se!"
+            f"BAIXA UMIDADE: Risco à saúde/queimadas em {ultimo['data']} ({ultimo['umidade']}%)."
         )
 
-    # 3. Risco de Tempestade / Inundação
-    if ultimo_registro["chuva"] >= 40.0:
+    if ultimo["chuva"] >= 40.0:
         alertas.append(
-            f"🚨 ALERTA DE TEMPESTADE: Volume de chuva crítico detectado ({ultimo_registro['chuva']}mm)."
+            f"TEMPESTADE: Alto volume de precipitação em {ultimo['data']} ({ultimo['chuva']}mm)."
         )
 
-    # 4. Análise de Mudança Abrupta (Choque térmico / Frente fria)
+    # Analisa mudanças bruscas de um dia para o outro
     if len(dados) >= 2:
         penultimo = dados[-2]
-        queda_temp = penultimo["temp"] - ultimo_registro["temp"]
+        queda_temp = penultimo["temp"] - ultimo["temp"]
         if queda_temp >= 5.0:
             alertas.append(
-                f"⚡ MUDANÇA BRUSCA: Queda rápida de temperatura detectada (-{queda_temp}°C em 24h)."
+                f"⚡ CHOQUE TÉRMICO: Queda abrupta de temperatura entre {penultimo['data']} e {ultimo['data']} (-{queda_temp}°C)."
             )
 
     return alertas
 
 
-# --- Interface do Terminal ---
 def exibir_painel():
-    print("=" * 55)
-    print("         SISTEMA DE ANÁLISE CLIMÁTICA NATIVO         ")
-    print("=" * 55)
-
-    # Executa as análises
+    """Imprime os resultados analíticos na tela."""
     stats = analisar_historico(dados_climaticos)
-    previsao = prever_proximo_dia(dados_climaticos)
-    alertas = detectar_riscos(dados_climaticos)
 
-    # Exibe Resumo
-    print("\n📊 RESUMO DO PERÍODO HISTÓRICO:")
-    print(f"  • Temperatura Média: {stats['media_temp']:.1f}°C")
-    print(
-        f"  • Amplitude Térmica: {stats['temp_min']}°C a {stats['temp_max']}°C")
-    print(f"  • Umidade Média:     {stats['media_umi']:.1f}%")
-    print(f"  • Acumulado de Chuva: {stats['total_chuva']:.1f} mm")
+    if not stats:
+        print("Nenhum dado foi inserido para análise.")
+        return
 
+    print("=" * 55)
+    print("                PAINEL DE ANÁLISE FINAL                ")
+    print("=" * 55)
+
+    # 1. Resumo Estatístico
+    print("\n ESTATÍSTICAS DO PERÍODO:")
+    print(f"  • Dias Analisados:    {len(dados_climaticos)}")
+    print(f"  • Temp. Média:        {stats['media_temp']:.1f}°C")
+    print(f"  • Limites Térmicos:   {stats['temp_min']}°C a {stats['temp_max']}°C")
+    print(f"  • Umidade Média:      {stats['media_umi']:.1f}%")
+    print(f"  • Chuva Acumulada:    {stats['total_chuva']:.1f} mm")
     print("-" * 55)
 
-    # Exibe Alertas de Risco
-    print("🚨 DETECÇÃO DE PADRÕES DE RISCO:")
+    # 2. Detecção de Riscos
+    print(" PADRÕES DE RISCO DETECTADOS:")
+    alertas = detectar_riscos(dados_climaticos)
     if alertas:
         for alerta in alertas:
             print(f"  {alerta}")
     else:
-        print("  ✅ Nenhum padrão de risco crítico detectado no momento.")
-
+        print("  Nenhum padrão de risco extremo encontrado.")
     print("-" * 55)
 
-    # Exibe Previsão
-    print("🔮 PREVISÃO ESTATÍSTICA PARA AMANHÃ:")
+    # 3. Previsão
+    print("PREVISÃO PARA O DIA SEGUINTE:")
+    previsao = prever_proximo_dia(dados_climaticos)
     if isinstance(previsao, dict):
-        print(f"  • Temperatura Estimada: {previsao['temp']}°C")
-        print(f"  • Umidade Estimada:     {previsao['umidade']}%")
-        print(f"  • Condição:             {previsao['chuva']}")
+        print(f"  • Temp. Estimada:     {previsao['temp']}°C")
+        print(f"  • Umidade Estimada:   {previsao['umidade']}%")
+        print(f"  • Tendência do Tempo: {previsao['chuva']}")
     else:
-        print(previsao)
+        print(f"  {previsao}")
     print("=" * 55)
 
 
+# --- Execução Principal ---
 if __name__ == "__main__":
+    coletar_dados_input()
     exibir_painel()
