@@ -1,0 +1,1001 @@
+{
+  "intents": [
+    {
+      "intent": "Alerta_desastre",
+      "examples": [
+        {
+          "text": "desastres previstos para essa semana"
+        },
+        {
+          "text": "deslizamento"
+        },
+        {
+          "text": "enchente"
+        },
+        {
+          "text": "Há algum aviso de tempestade?"
+        },
+        {
+          "text": "incêndio florestal em algum lugar?"
+        },
+        {
+          "text": "risco de desastre"
+        },
+        {
+          "text": "risco de desastre em são paulo"
+        },
+        {
+          "text": "risco de deslizamento na minha região"
+        },
+        {
+          "text": "risco de inundação"
+        },
+        {
+          "text": "situação atual de enchentes"
+        },
+        {
+          "text": "tem alerta amarelo?"
+        },
+        {
+          "text": "tem alerta ativo agora?"
+        },
+        {
+          "text": "tem alerta de enchente?"
+        },
+        {
+          "text": "tem alerta de seca?"
+        },
+        {
+          "text": "tem alerta de seca no nordeste?"
+        },
+        {
+          "text": "tem alerta vermelho?"
+        },
+        {
+          "text": "tem algum alerta?"
+        },
+        {
+          "text": "tem aviso de desastre?"
+        },
+        {
+          "text": "tempestade"
+        },
+        {
+          "text": "tem risco de alagamento amanhã?"
+        },
+        {
+          "text": "vai ter tempestade forte?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Boas_vindas",
+      "examples": [
+        {
+          "text": "boa noite"
+        },
+        {
+          "text": "boa tarde"
+        },
+        {
+          "text": "bom dia"
+        },
+        {
+          "text": "como vai?"
+        },
+        {
+          "text": "eae"
+        },
+        {
+          "text": "e aí"
+        },
+        {
+          "text": "fala aí"
+        },
+        {
+          "text": "oi"
+        },
+        {
+          "text": "oi bot"
+        },
+        {
+          "text": "ola"
+        },
+        {
+          "text": "olá"
+        },
+        {
+          "text": "salve"
+        },
+        {
+          "text": "/start"
+        },
+        {
+          "text": "start"
+        },
+        {
+          "text": "tudo bem?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Informacoes",
+      "examples": [
+        {
+          "text": "como você funciona"
+        },
+        {
+          "text": "economia espacial e clima"
+        },
+        {
+          "text": "fale do tema da global solution"
+        },
+        {
+          "text": "informação sobre o bot"
+        },
+        {
+          "text": "me fale mais sobre prevenção de desastres"
+        },
+        {
+          "text": "o que é esse assistente"
+        },
+        {
+          "text": "o que você faz"
+        },
+        {
+          "text": "qual é o objetivo desse chatbot"
+        },
+        {
+          "text": "qual o propósito do climasat"
+        },
+        {
+          "text": "quem é você"
+        },
+        {
+          "text": "relação com ods 13"
+        },
+        {
+          "text": "sobre a global solution"
+        },
+        {
+          "text": "sobre o projeto"
+        },
+        {
+          "text": "você usa dados de satélite?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Prevencao",
+      "examples": [
+        {
+          "text": "como ajudar em desastres"
+        },
+        {
+          "text": "como me prevenir de desastre"
+        },
+        {
+          "text": "como preparar a família para desastres"
+        },
+        {
+          "text": "como proteger minha casa de alagamento"
+        },
+        {
+          "text": "dicas de prevenção climática"
+        },
+        {
+          "text": "dicas para tempestade"
+        },
+        {
+          "text": "medidas de segurança em caso de inundação"
+        },
+        {
+          "text": "o que eu faco em caso de enchente"
+        },
+        {
+          "text": "o que eu faco em caso deslizamento"
+        },
+        {
+          "text": "o que eu faco em caso de tempestade"
+        },
+        {
+          "text": "o que eu faco em casos de"
+        },
+        {
+          "text": "o que fazer durante um vendaval"
+        },
+        {
+          "text": "o que fazer em caso de enchente"
+        },
+        {
+          "text": "o que fazer se tiver alerta de enchente"
+        },
+        {
+          "text": "o que levar no kit de emergência"
+        },
+        {
+          "text": "orientações para tempestades"
+        },
+        {
+          "text": "plano de evacuação"
+        },
+        {
+          "text": "prevenção contra seca"
+        },
+        {
+          "text": "prevenção de deslizamento"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Previsao",
+      "examples": [
+        {
+          "text": "como está o tempo hoje"
+        },
+        {
+          "text": "o que o satélite mostra para belo horizonte"
+        },
+        {
+          "text": "previsao"
+        },
+        {
+          "text": "previsão do tempo para rio de janeiro"
+        },
+        {
+          "text": "previsão para amanhã na minha cidade"
+        },
+        {
+          "text": "previsão para o nordeste"
+        },
+        {
+          "text": "previsão para o sudeste"
+        },
+        {
+          "text": "qual a previsão para são paulo"
+        },
+        {
+          "text": "qual cidade vai chover mais?"
+        },
+        {
+          "text": "qual e a temperatura"
+        },
+        {
+          "text": "qual e a temperatura?"
+        },
+        {
+          "text": "qual vai ser a temperatura amanha"
+        },
+        {
+          "text": "Quantos graus esta agora?"
+        },
+        {
+          "text": "tem chuva forte essa semana?"
+        },
+        {
+          "text": "tem frente fria chegando?"
+        },
+        {
+          "text": "temperatura"
+        },
+        {
+          "text": "vai chover?"
+        },
+        {
+          "text": "vai chover amanhã em sp?"
+        },
+        {
+          "text": "vai fazer calor amanhã?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "acao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "alertar",
+          "synonyms": [
+            "me avisar"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "evacuar",
+          "synonyms": [
+            "evacuação",
+            "fugir",
+            "sair de casa"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "monitorar",
+          "synonyms": [
+            "acompanhar",
+            "monitorar"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "preparar",
+          "synonyms": [
+            "kit de emergência",
+            "me preparar",
+            "preparar"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "prevenir",
+          "synonyms": [
+            "como prevenir",
+            "me prevenir",
+            "prevenção"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "proteger",
+          "synonyms": [
+            "proteção",
+            "proteger"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "cidade",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "belo horizonte",
+          "synonyms": [
+            "belo horizonte",
+            "bh",
+            "minas"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "brasília",
+          "synonyms": [
+            "brasilia",
+            "df"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "curitiba",
+          "synonyms": [
+            "curitiba pr"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "florianópolis",
+          "synonyms": [
+            "florianopolis",
+            "floripa"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "fortaleza",
+          "synonyms": [
+            "fortaleza ce"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "goiânia",
+          "synonyms": [
+            "goiania"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "manaus",
+          "synonyms": [
+            "manaus am"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "porto alegre",
+          "synonyms": [
+            "porto alegre",
+            "rs"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "recife",
+          "synonyms": [
+            "pernambuco",
+            "recife pe"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "rio de janeiro",
+          "synonyms": [
+            "capital rj",
+            "rio de janeiro",
+            "rj"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "salvador",
+          "synonyms": [
+            "salvador ba"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "são paulo",
+          "synonyms": [
+            "capital sp",
+            "sao paulo",
+            "sp"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "desastre",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "deslizamento",
+          "synonyms": [
+            "deslizamento",
+            "deslizamento de terra"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "enchente",
+          "synonyms": [
+            "alagamento",
+            "enchente",
+            "inundação"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "furacão",
+          "synonyms": [
+            "ciclone",
+            "furacão"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "incendio",
+          "synonyms": [
+            "incêndio florestal",
+            "queimada"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "inundacao",
+          "synonyms": [
+            "inundação"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "seca",
+          "synonyms": [
+            "estiagem",
+            "falta de chuva",
+            "seca"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tempestade",
+          "synonyms": [
+            "chuva forte",
+            "tempestade",
+            "temporal",
+            "vendaval"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "tornado",
+          "synonyms": [
+            "tornado"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "periodo",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "amanhã",
+          "synonyms": [
+            "amanha",
+            "dia seguinte",
+            "próximo dia"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "esta semana",
+          "synonyms": [
+            "durante a semana",
+            "essa semana"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "final de semana",
+          "synonyms": [
+            "domingo",
+            "fim de semana",
+            "sábado"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "hoje",
+          "synonyms": [
+            "agora",
+            "momento atual",
+            "no momento"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "proxima semana",
+          "synonyms": [
+            "semana que vem"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "proximos dias",
+          "synonyms": [
+            "próximos dias"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "regiao",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "centro-oeste",
+          "synonyms": [
+            "centro oeste",
+            "co"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "nordeste",
+          "synonyms": [
+            "ne",
+            "nordeste"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "norte",
+          "synonyms": [
+            "no",
+            "norte do brasil"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sudeste",
+          "synonyms": [
+            "se",
+            "sudeste"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sul",
+          "synonyms": [
+            "sul",
+            "sul do brasil"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Desculpe, não consegui entender\n\nVocê pode perguntar sobre:\n\n• previsão do tempo\n• enchentes\n• tempestades\n• alertas climáticos\n• prevenção\n• informações sobre o projeto"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_4_1780324040232",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Recomendações para deslizamentos:\n\n• Saia de áreas de encosta\n• Observe rachaduras no solo\n• Procure abrigos seguros\n• Contate a Defesa Civil"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1780074120741",
+      "conditions": "@desastre:deslizamento",
+      "dialog_node": "node_10_1780074222677",
+      "previous_sibling": "node_2_1780074202919"
+    },
+    {
+      "type": "standard",
+      "title": "Alerta_desastre",
+      "output": {
+        "generic": []
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#Alerta_desastre",
+      "dialog_node": "node_1_1780072773722",
+      "previous_sibling": "node_4_1780071068527"
+    },
+    {
+      "type": "standard",
+      "title": "geral",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Medidas gerais de prevenção:\n\n• Acompanhe alertas climáticos\n• Evite áreas de risco\n• Tenha kit de emergência\n• Mantenha documentos protegidos"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1780074120741",
+      "conditions": "true",
+      "dialog_node": "node_1_1780074256970",
+      "previous_sibling": "node_10_1780074222677"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Recomendações para tempestades:\n\n• Evite árvores e postes\n• Permaneça em local fechado\n• Tire aparelhos da tomada\n• Evite áreas abertas"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1780074120741",
+      "conditions": "@desastre:tempestade",
+      "dialog_node": "node_2_1780074202919",
+      "previous_sibling": "node_3_1780074177118"
+    },
+    {
+      "type": "standard",
+      "title": "Cidade_sim_desastre_nao",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alertas ativos em $cidade\n\n• Enchente\n• Tempestade intensa\n• Deslizamento"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1780072773722",
+      "conditions": "$cidade",
+      "dialog_node": "node_3_1780072881354",
+      "previous_sibling": "node_5_1780072828601"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Recomendações para enchentes:\n\n• Evite áreas alagadas\n• Não atravesse correntezas\n• Procure locais elevados\n• Desligue aparelhos elétricos"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1780074120741",
+      "conditions": "@desastre:enchente",
+      "dialog_node": "node_3_1780074177118"
+    },
+    {
+      "type": "standard",
+      "title": "start_telegram",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Eu sou o NeoSpherebot\n\nSistema inteligente de monitoramento climático e prevenção de desastres.\n\nVocê pode perguntar sobre:\n• previsão do tempo\n• enchentes\n• tempestades\n• alertas climáticos\n• prevenção\n• informações sobre o projeto\n\nEm qual cidade ou região você quer informações?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "input.text == \"/start\"",
+      "dialog_node": "node_3_1780330098290",
+      "previous_sibling": "node_7_1780070898896"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! como posso ajudar hoje?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Boas_vindas",
+      "dialog_node": "node_3_1780919547426",
+      "previous_sibling": "node_6_1780070758159"
+    },
+    {
+      "type": "standard",
+      "title": "Previsao",
+      "output": {
+        "generic": []
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#Previsao",
+      "dialog_node": "node_4_1780071068527",
+      "previous_sibling": "node_3_1780919547426"
+    },
+    {
+      "type": "standard",
+      "title": "Nao_tem_cidade",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual cidade você deseja consultar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1780072773722",
+      "conditions": "true",
+      "dialog_node": "node_4_1780073082432",
+      "previous_sibling": "node_3_1780072881354"
+    },
+    {
+      "type": "standard",
+      "title": "Informacoes",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "O NeoSpherebot é uma solução desenvolvida para auxiliar na previsão climática e prevenção de desastres naturais.\n\nO sistema fornece:\n• alertas climáticos\n• monitoramento de riscos\n• orientações preventivas\n• suporte informativo à população"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Informacoes",
+      "dialog_node": "node_4_1780324040232",
+      "previous_sibling": "node_7_1780074120741"
+    },
+    {
+      "type": "standard",
+      "title": "Cidade_e_desastre_sim",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " ALERTA — $cidade\n\nRisco detectado de @desastre."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1780072773722",
+      "conditions": "$cidade && @desastre",
+      "dialog_node": "node_5_1780072828601"
+    },
+    {
+      "type": "standard",
+      "title": "salvar_cidade",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Cidade definida como $cidade.\n\nAgora posso fornecer previsões e alertas climáticos da região."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "cidade": "@cidade"
+      },
+      "conditions": "@cidade",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1780070758159",
+      "previous_sibling": "node_3_1780330098290"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Eu sou o NeoSpherebot\n\nSistema inteligente de monitoramento climático e prevenção de desastres.\n\nVocê pode perguntar sobre:\n• previsão do tempo\n• enchentes\n• tempestades\n• alertas climáticos\n• prevenção\n• informações sobre o projeto\n\nEm qual cidade ou região você quer informações?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "node_7_1780070898896"
+    },
+    {
+      "type": "standard",
+      "title": "Prevencao",
+      "output": {
+        "generic": []
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#Prevencao",
+      "dialog_node": "node_7_1780074120741",
+      "previous_sibling": "node_1_1780072773722"
+    },
+    {
+      "type": "standard",
+      "title": "Com_cidade",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Previsão climática para $cidade\n\n• Temperatura média: 27°C\n• Chance de chuva: 70%\n• Ventos moderados\n• Umidade elevada\n\nAtenção:\nPossibilidade de pancadas fortes no período da tarde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1780071068527",
+      "conditions": "$cidade",
+      "dialog_node": "node_9_1780071965113"
+    },
+    {
+      "type": "standard",
+      "title": "Sem_cidade",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual cidade você deseja consultar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1780071068527",
+      "conditions": "true",
+      "dialog_node": "node_9_1780071982763",
+      "previous_sibling": "node_9_1780071965113"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "",
+  "name": "Global-Solution-dialog"
+}
