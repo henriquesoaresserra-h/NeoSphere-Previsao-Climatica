@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Tóquio - Monitoramento</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+            ⚠️ SISTEMA INTELIGENTE DE PREVISÃO CLIMÁTICA E PREVENÇÃO DE DESASTRES NATURAIS — TÓQUIO | MONITORAMENTO EM TEMPO REAL | TUFÃO HAGIBIS APROXIMANDO-SE | NÍVEL DE RISCO: ALTO | MANTENHA-SE INFORMADO E SEGURO ⚠️
+        </marquee>
+    </header>
+
+    <main>
+        <div id="map"></div>
+
+        <aside id="side-panel">
+            <h2>📡 Status Atual</h2>
+            <div id="weather-status">
+                <div class="status-item">🌡️ Temperatura: 22°C</div>
+                <div class="status-item">💧 Umidade: 65%</div>
+                <div class="status-item">🌬️ Vento: 15 km/h</div>
+                <div class="status-item">☀️ Índice UV: Baixo</div>
+                <div class="status-item">⚠️ Risco Geral: Mínimo</div>
+            </div>
+
+            <h3>🚨 Alertas Recentes</h3>
+            <ul id="alert-list">
+                <li><strong>Tufão Hagibis</strong> — Aproximação prevista para as próximas 24h. Evacuação recomendada nas zonas costeiras.</li>
+                <li><strong>Inundação</strong> — Bairros de Sumida e Edogawa em alerta máximo. Nível dos rios acima do normal.</li>
+                <li><strong>Terremoto</strong> — Abalo sísmico de magnitude 3.2 registrado na região de Chiba. Sem danos reportados.</li>
+            </ul>
+        </aside>
+
+        <section id="charts-section">
+            <div class="chart-container">
+                <h3>📈 Temperatura Média (Últimos 7 Dias)</h3>
+                <canvas id="tempChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>📊 Probabilidade de Desastres (%)</h3>
+                <canvas id="disasterChart"></canvas>
+            </div>
+        </section>
+
+        <div id="chatbot">
+            <div id="chatbot-header">
+                🤖 Assistente de Prevenção <span id="chatbot-toggle">−</span>
+            </div>
+            <div id="chatbot-body">
+                <div id="chatbot-messages">
+                    <div class="message bot">Olá! 🏯 Sou o assistente virtual do sistema de prevenção de desastres de Tóquio. Pergunte sobre tufões, terremotos, clima ou rotas de evacuação.</div>
+                </div>
+                <div id="chatbot-input-area">
+                    <input type="text" id="chatbot-input" placeholder="Digite sua dúvida...">
+                    <button id="chatbot-send">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
