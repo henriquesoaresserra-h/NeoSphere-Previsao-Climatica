@@ -1,4 +1,4 @@
-[README (1).md](https://github.com/user-attachments/files/29111009/README.1.md)
+[README (3).md](https://github.com/user-attachments/files/29111287/README.3.md)
 # 🌍 NeoSphere — Previsão Climática & Prevenção de Desastres
 
 > Sistema integrado de monitoramento climático e prevenção de desastres naturais desenvolvido para a **Global Solution — FIAP 2026**.
@@ -17,10 +17,10 @@ O projeto foi desenvolvido de forma colaborativa por cinco integrantes, cada um 
 
 | Integrante | RM | Turma | Frente | Responsabilidades |
 |---|---|---|---|---|
-| **[Henrique Soares Serra](https://www.linkedin.com/in/henrique-s-s-47419a3aa/)** — *Líder do Projeto* | 573618 | 1TDSPI | Banco de Dados | Coordenação geral da equipe e divisão de frentes; modelagem conceitual, lógica e física do banco; scripts SQL; documentação do BD|
+| **[Henrique Soares Serra](https://www.linkedin.com/in/henrique-s-s-47419a3aa/)** — *Líder do Projeto* | 573618 | 1TDSPI | Banco de Dados | Coordenação geral da equipe e divisão de frentes; modelagem conceitual, lógica e física do banco; scripts SQL; documentação do BD; contribuição na arquitetura de software |
 | **Lucas Costa** | 571016 | 1TDSPI | Front-End | Interface web responsiva e moderna; integração com as APIs do sistema |
-| **Christian Pereira Rodrigues** | 571586 | 1TDSPJ | Back-End Java | Arquitetura da API REST; lógica de negócio; padrões de projeto;|
-| **Arthur Chang Skolimoski** | 572510 | 1TDSPH | Python & Dados | Scripts de análise e processamento de dados climáticos; automações do sistema |
+| **Christian Pereira Rodrigues** | 571586 | 1TDSPJ | Back-End Java | Arquitetura da API REST; lógica de negócio; padrões de projeto; integração com o banco de dados |
+| **[Arthur Chang Skolimoski](https://www.linkedin.com/in/arthur-chang-skolimoski-750598397/)** | 572510 | 1TDSPH | Python & Dados | Scripts de análise e processamento de dados climáticos; automações do sistema |
 | **Lucas Fortunato Brandão de Pinho** | 572860 | 1TDSPI | IA & Chatbot | Desenvolvimento do chatbot assistente; integração do módulo de inteligência artificial |
 
 > **Nota:** A modelagem de software e documentação de arquitetura (`/software`) foi uma contribuição coletiva da equipe.
