@@ -1,4 +1,4 @@
-[README (3).md](https://github.com/user-attachments/files/29111287/README.3.md)
+[README (4).md](https://github.com/user-attachments/files/29111640/README.4.md)
 # 🌍 NeoSphere — Previsão Climática & Prevenção de Desastres
 
 > Sistema integrado de monitoramento climático e prevenção de desastres naturais desenvolvido para a **Global Solution — FIAP 2026**.
@@ -7,9 +7,11 @@
 
 ## Sobre o Projeto
 
-O **NeoSphere** é uma plataforma completa que combina análise de dados climáticos em tempo real, banco de dados robusto, interface web responsiva e suporte automatizado por inteligência artificial — tudo com o objetivo de mitigar os impactos de desastres naturais.
+O **NeoSphere** é uma plataforma integrada de monitoramento climático e prevenção de desastres naturais. O sistema combina uma API REST em Java, banco de dados relacional Oracle, interface web responsiva e módulos de inteligência artificial — permitindo a coleta, persistência e visualização de dados climáticos em tempo real, além de suporte automatizado via chatbot para orientação em situações de risco.
 
 O projeto foi desenvolvido de forma colaborativa por cinco integrantes, cada um responsável por uma frente técnica específica. Este repositório centraliza o ecossistema completo para fins de portfólio e apresentação acadêmica.
+
+> O repositório original do grupo está disponível em [github.com/Thiefman469/GS-Neosphere](https://github.com/Thiefman469/GS-Neosphere).
 
 ---
 
@@ -17,9 +19,9 @@ O projeto foi desenvolvido de forma colaborativa por cinco integrantes, cada um 
 
 | Integrante | RM | Turma | Frente | Responsabilidades |
 |---|---|---|---|---|
-| **[Henrique Soares Serra](https://www.linkedin.com/in/henrique-s-s-47419a3aa/)** — *Líder do Projeto* | 573618 | 1TDSPI | Banco de Dados | Coordenação geral da equipe e divisão de frentes; modelagem conceitual, lógica e física do banco; scripts SQL; documentação do BD; contribuição na arquitetura de software |
-| **Lucas Costa** | 571016 | 1TDSPI | Front-End | Interface web responsiva e moderna; integração com as APIs do sistema |
-| **Christian Pereira Rodrigues** | 571586 | 1TDSPJ | Back-End Java | Arquitetura da API REST; lógica de negócio; padrões de projeto; integração com o banco de dados |
+| **[Henrique Soares Serra](https://www.linkedin.com/in/henrique-s-s-47419a3aa/)** — *Líder do Projeto* | 573618 | 1TDSPI | Banco de Dados | Coordenação geral da equipe e divisão de frentes; modelagem conceitual, lógica e física do banco; scripts SQL; documentação do BD |
+| **[Lucas Costa](https://www.linkedin.com/in/lucas-costa-serrano-647327278)** | 571016 | 1TDSPI | Front-End | Interface web responsiva e moderna; integração com as APIs do sistema |
+| **[Christian Pereira Rodrigues](https://www.linkedin.com/in/christian-rodrigues-b756263b8/)** | 571586 | 1TDSPJ | Back-End Java | Arquitetura da API REST; lógica de negócio; padrões de projeto |
 | **[Arthur Chang Skolimoski](https://www.linkedin.com/in/arthur-chang-skolimoski-750598397/)** | 572510 | 1TDSPH | Python & Dados | Scripts de análise e processamento de dados climáticos; automações do sistema |
 | **Lucas Fortunato Brandão de Pinho** | 572860 | 1TDSPI | IA & Chatbot | Desenvolvimento do chatbot assistente; integração do módulo de inteligência artificial |
 
