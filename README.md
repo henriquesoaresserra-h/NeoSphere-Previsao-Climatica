@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/29110784/README.md)
+[README (1).md](https://github.com/user-attachments/files/29111009/README.1.md)
 # 🌍 NeoSphere — Previsão Climática & Prevenção de Desastres
 
 > Sistema integrado de monitoramento climático e prevenção de desastres naturais desenvolvido para a **Global Solution — FIAP 2026**.
@@ -17,9 +17,9 @@ O projeto foi desenvolvido de forma colaborativa por cinco integrantes, cada um 
 
 | Integrante | RM | Turma | Frente | Responsabilidades |
 |---|---|---|---|---|
-| **[Henrique Soares Serra](https://www.linkedin.com/in/henrique-s-s-47419a3aa/)** — *Líder do Projeto* | 573618 | 1TDSPI | Banco de Dados | Coordenação geral da equipe e divisão de frentes; modelagem conceitual, lógica e física do banco; scripts SQL; documentação do BD |
+| **[Henrique Soares Serra](https://www.linkedin.com/in/henrique-s-s-47419a3aa/)** — *Líder do Projeto* | 573618 | 1TDSPI | Banco de Dados | Coordenação geral da equipe e divisão de frentes; modelagem conceitual, lógica e física do banco; scripts SQL; documentação do BD|
 | **Lucas Costa** | 571016 | 1TDSPI | Front-End | Interface web responsiva e moderna; integração com as APIs do sistema |
-| **Christian Pereira Rodrigues** | 571586 | 1TDSPJ | Back-End Java | Arquitetura da API REST; lógica de negócio; padrões de projeto |
+| **Christian Pereira Rodrigues** | 571586 | 1TDSPJ | Back-End Java | Arquitetura da API REST; lógica de negócio; padrões de projeto;|
 | **Arthur Chang Skolimoski** | 572510 | 1TDSPH | Python & Dados | Scripts de análise e processamento de dados climáticos; automações do sistema |
 | **Lucas Fortunato Brandão de Pinho** | 572860 | 1TDSPI | IA & Chatbot | Desenvolvimento do chatbot assistente; integração do módulo de inteligência artificial |
 
@@ -32,12 +32,31 @@ O projeto foi desenvolvido de forma colaborativa por cinco integrantes, cada um 
 ```
 NeoSphere-Previsao-Climatica/
 │
-├── GS-Front-End/       # Interface web — HTML5, CSS3, JavaScript
-├── GS_Database/        # Scripts SQL, modelagem e documentação do banco de dados
-├── fiap-gs-java/       # API REST e back-end em Java
-├── gs-chatbot/         # Módulo de chatbot com inteligência artificial
-├── python/             # Scripts de análise de dados climáticos em Python
-└── software/           # Documentação de arquitetura e modelagem de software
+├── GS-Front-End/
+│   ├── GSFront/                        # Código-fonte da interface web
+│   └── images/                         # Assets visuais do front-end
+│
+├── GS_Database/
+│   ├── neosphere_script.sql            # Script de criação e população do banco
+│   ├── modelo MER.png                  # Modelo Entidade-Relacionamento
+│   └── modelo lógico.png               # Modelo lógico do banco de dados
+│
+├── fiap-gs-java/
+│   ├── codigo-java-gs/                 # Código-fonte da API REST em Java
+│   └── documentacao-gs-java.pdf        # Documentação técnica do back-end
+│
+├── gs-chatbot/
+│   ├── Global-Solution-dialog.json     # Fluxo de diálogo do chatbot
+│   └── flowsgs.json                    # Fluxo de automação
+│
+├── python/
+│   ├── GOBAL-python.py                 # Script principal de análise de dados
+│   └── GS-python.pdf                   # Documentação do módulo Python
+│
+└── software/
+    ├── figma/                          # Arquivos de design da interface
+    ├── Business Model Canvas.jpg       # Canvas do modelo de negócio
+    └── GLOBAL SOLUTION 2026.pdf        # Documentação geral do projeto
 ```
 
 ---
